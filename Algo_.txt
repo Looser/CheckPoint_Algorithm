@@ -1,0 +1,87 @@
+ALGORITHM String_Check
+
+VAR
+i,N_space,N_Voyel,N_Char : INTEGER;
+
+S: STRING;
+
+i := 0;
+
+N_space := 1;
+
+N_Voyel := 0;
+
+N_Char := 1;
+
+S := "";
+
+BEGIN
+
+WRITELN("Enter your sentence PlZ !!");
+
+Readln(S);
+
+WHILE (S[i] <> ".") DO
+
+
+ i += 1;
+
+N_Char += 1;
+
+if(S[i] == " "  )  {N_space += 1;  N_Char -= 1; }
+
+
+SWITCH (S[i]) DO
+    CASE "a" :  N_Voyel+=1;
+            BREAK; 
+   
+    CASE "e" :  N_Voyel+=1;
+            BREAK; 
+
+             CASE "i" :  N_Voyel+=1;
+            BREAK; 
+
+             CASE "o" :  N_Voyel+=1;
+            BREAK; 
+
+             CASE "u" :  N_Voyel+=1;
+            BREAK; 
+
+            // Majiscule
+
+ CASE "A" :  N_Voyel+=1;
+            BREAK; 
+   
+    CASE "E" :  N_Voyel+=1;
+            BREAK; 
+
+             CASE "I" :  N_Voyel+=1;
+            BREAK; 
+
+             CASE "O" :  N_Voyel+=1;
+            BREAK; 
+
+             CASE "U" :  N_Voyel+=1;
+            BREAK; 
+
+
+
+
+
+    DEFAULT :   N_Voyel+=0;
+            
+END_SWITCH
+
+
+WRITELN("The length of the sentence: " + N_Char) ;
+
+WRITELN("The number of words in the sentence: " + N_space );
+
+WRITELN("The number of vowels in the sentence: " + N_Voyel );
+
+
+
+
+END_WHILE
+
+END
